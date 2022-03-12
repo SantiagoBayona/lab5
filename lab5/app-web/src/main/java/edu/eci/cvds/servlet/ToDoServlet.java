@@ -19,52 +19,69 @@ import java.util.Optional;
         urlPatterns = "/todoServlet"
 )
 
-public class ToDoServlet extends HttpServlet{
-
+public class ToDoServlet extends HttpServlet {
     static final long serialVersionUID = 35L;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Writer responseWriter = resp.getWriter();
         try {
-            Optional<String> optId = Optional.ofNullable(req.getParameter("id"));
-            int n = optId.isPresent() && !optId.get().isEmpty() ? Integer.parseInt(optId.get()) : 0;
-            Todo t = Service.getTodo(n);
-            resp.setStatus(HttpServletResponse.SC_OK);
-            ArrayList<Todo> todos = new ArrayList<>();
-            todos.add(t);
-            responseWriter.write(Service.todosToHTMLTable(todos));
-        }catch (FileNotFoundException e){
+            Optional<String> optName = Optional.ofNullable(req.getParameter("id"));
+            if (optName.isPresent()) {
+                int id = Integer.parseInt(optName.get());
+                resp.setStatus(HttpServletResponse.SC_OK);
+                ArrayList<Todo> todos = new ArrayList<>();
+                Todo todo = Service.getTodo(id);
+                todos.add(todo);
+                responseWriter.write(Service.todosToHTMLTable(todos));
+            }
+        }
+        catch (FileNotFoundException e){
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
-        }catch (NumberFormatException e){
+            responseWriter.write("No existe un item con el identificador dado");
+        }
+        catch (NumberFormatException e){
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-        }catch(MalformedURLException e){
+            responseWriter.write("El parametro no es un numero");
+        }
+        catch (MalformedURLException e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-        }catch (Exception e){
+            responseWriter.write("Error interno del servidor");
+        }
+        catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            responseWriter.write("Requerimiento invalido");
         }
     }
-
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Writer responseWriter = resp.getWriter();
         try {
-            Optional<String> optId = Optional.ofNullable(req.getParameter("id"));
-            int n = optId.isPresent() && !optId.get().isEmpty() ? Integer.parseInt(optId.get()) : 0;
-            Todo t = Service.getTodo(n);
-            resp.setStatus(HttpServletResponse.SC_OK);
-            ArrayList<Todo> todos = new ArrayList<>();
-            todos.add(t);
-            responseWriter.write(Service.todosToHTMLTable(todos));
-        }catch (FileNotFoundException e){
+            Optional<String> optName = Optional.ofNullable(req.getParameter("id"));
+            if (optName.isPresent()) {
+                int id = Integer.parseInt(optName.get());
+                resp.setStatus(HttpServletResponse.SC_OK);
+                ArrayList<Todo> todos = new ArrayList<>();
+                Todo todo = Service.getTodo(id);
+                todos.add(todo);
+                responseWriter.write(Service.todosToHTMLTable(todos));
+            }
+        }
+        catch (FileNotFoundException e){
             resp.setStatus(HttpServletResponse.SC_NOT_FOUND);
-        }catch (NumberFormatException e){
+            responseWriter.write("No existe un item con el identificador dado");
+        }
+        catch (NumberFormatException e){
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-        }catch(MalformedURLException e){
+            responseWriter.write("El parametro no es un numero");
+        }
+        catch (MalformedURLException e){
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-        }catch (Exception e){
+            responseWriter.write("Error interno del servidor");
+        }
+        catch (Exception e){
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            responseWriter.write("Requerimiento invalido");
         }
     }
-
 }
