@@ -93,7 +93,7 @@ Connection: close`
 ➜  ~ wc -c resultado.txt      
 3742 resultado.txt
 
-![Texto alternativo](https://github.com/CAndresRa/CVDS/blob/master/Laboratorio5-CVDS/imagenes/0.png)
+![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/getpost.png)
 
 6. En la practica no se utiliza telnet para hacer peticiones a sitios web sino el comando curl con ayuda de la linea de comandos:
 
