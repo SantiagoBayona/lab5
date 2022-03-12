@@ -127,6 +127,16 @@ Access-Control-Allow-Credentials: true
 # PARTE DOS
 
 ![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/hello1.PNG)
+
 ![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/hello2.PNG)
+
 ![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/gson.PNG)
 
+
+
+**Uso Get**
+![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/get.PNG)
+
+
+**Uso Post**
+![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/post.PNG)
