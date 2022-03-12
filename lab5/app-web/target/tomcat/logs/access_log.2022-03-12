@@ -19,3 +19,11 @@
 0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:19:57 -0500] "GET /todoServlet HTTP/1.1" 200 - http-bio-8080-exec-4 1
 0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:20:04 -0500] "GET /todoServlet?id HTTP/1.1" 400 28 http-bio-8080-exec-6 1
 0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:20:19 -0500] "GET /todoServlet HTTP/1.1" 200 - http-bio-8080-exec-3 1
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:32:38 -0500] "GET / HTTP/1.1" 200 63 http-bio-8080-exec-2 238
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:32:57 -0500] "GET /index.jsp HTTP/1.1" 200 52 http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:33:03 -0500] "GET /index.jsp HTTP/1.1" 200 52 http-bio-8080-exec-4 2
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:33:05 -0500] "GET /index.jsp HTTP/1.1" 200 52 http-bio-8080-exec-5 1
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:33:20 -0500] "GET /index.html HTTP/1.1" 404 971 http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:35:46 -0500] "GET /index.html HTTP/1.1" 200 527 http-bio-8080-exec-2 41
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:35:49 -0500] "GET / HTTP/1.1" 200 63 http-bio-8080-exec-3 182
+0:0:0:0:0:0:0:1 - - [12/Mar/2022:00:35:57 -0500] "POST /todoServlet HTTP/1.1" 200 153 http-bio-8080-exec-4 772
