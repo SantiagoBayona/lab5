@@ -122,3 +122,11 @@ Server: gunicorn/19.9.0
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Credentials: true
 ~~~
+
+
+# PARTE DOS
+
+![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/hello1.PNG)
+![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/hello2.PNG)
+![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/gson.PNG)
+
