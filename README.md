@@ -140,3 +140,7 @@ Access-Control-Allow-Credentials: true
 
 **Uso Post**
 ![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/post.PNG)
+
+
+**Formulario**
+![ImgenGetPost](https://github.com/EstebananoT/lab5/blob/main/img/formulario.PNG)
